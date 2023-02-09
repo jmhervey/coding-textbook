@@ -1,7 +1,7 @@
 # coding-textbook
 A service for providing assigned readings to students.
 
-# development
+## Developing the application
 This project has been configured with a docker-compose development environment.  You must docker and docker-compose installed, and if working in a Windows environment we highly recommend using Windows Subsystem for Linux with Docker Desktop and VS Code.
 
 Once the required software has been installed, clone the project and build using the terminal command:

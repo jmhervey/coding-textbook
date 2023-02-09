@@ -1,0 +1,11 @@
+FROM node:16
+
+WORKDIR /usr/src/coding-textbook/server
+
+COPY package*.json ./
+
+RUN npm install
+
+EXPOSE 3050
+
+CMD ["npm", "run", "dev"]

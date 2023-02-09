@@ -1,0 +1,21 @@
+version: '3'
+services:
+  coding-textbook-server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3080:3080"
+    container_name: coding-textbook-server
+    volumes:
+       - ./server:/usr/src/coding-textbook/server
+  coding-textbook-client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    container_name: coding-textbook-client
+    stdin_open: true
+    volumes:
+       - ./client:/usr/src/coding-textbook/client

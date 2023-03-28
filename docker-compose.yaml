@@ -5,7 +5,7 @@ services:
       context: ./server
       dockerfile: Dockerfile.dev
     ports:
-      - "3080:3080"
+      - "3050:3050"
     container_name: coding-textbook-server
     volumes:
        - ./server:/usr/src/coding-textbook/server

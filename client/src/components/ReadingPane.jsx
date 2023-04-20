@@ -20,9 +20,41 @@ const ReadingPane = React.memo( props => {
       setHtml(html);
       setLoading(false);
     })
-
-
   })
+
+    const RuleResults = React.createClass({
+        showMessage: function (rule) {
+            if (rule.ShowMessageToUser == true) {
+                alert(rule.MessageToUser);
+            }
+        },
+        render: function () {
+
+            var rules = this.props.businessRules.map((rule) => {
+                return (
+                    <tr>
+                        <td>
+                            <a href={rule.HREF} onClick={this.showMessage(rule)} target='_blank'>{rule.Name}</a>
+                        </td>
+                    </tr>
+                );
+            });
+            return (
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {rules}
+                        </tbody>
+                    </table>
+                </div>
+            );
+        }
+    });
 
 
 
@@ -34,37 +66,7 @@ const ReadingPane = React.memo( props => {
 
 })
 
-const Component = () => {
-    useEffect(() => {
-        window.addEventListener('beforeunload', alertUser)
-        window.addEventListener('unload', handleEndConcert)
-        return () => {
-            window.removeEventListener('beforeunload', alertUser)
-            window.removeEventListener('unload', handleEndConcert)
-            handleEndConcert()
-        }
-    }, [])
 
-    const alertUser = e => {
-        e.preventDefault()
-        e.returnValue = ''
-    }
 
-    const handleEndConcert = async () => {
-        await fetcher({
-            url: endConcert(concert.id),
-            method: 'PUT'
-        })
-    }
-
-    return (
-        <Container>
-            <Prompt
-                when={isPrompt()}
-                message={() => 'Are you sure you want to leave this page?'}
-            />
-        </Container>
-    )
-}
 
 export default ReadingPane;

@@ -29,7 +29,7 @@ const ReadingList = React.memo( props => {
     
   return (
     <nav>
-      <StyledListHeader>Assigned Readings</StyledListHeader>
+      <StyledListHeader>Textbooks</StyledListHeader>
       <StyledList>
         {items}
       </StyledList>

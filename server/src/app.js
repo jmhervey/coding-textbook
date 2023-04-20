@@ -8,7 +8,7 @@ app.use( bodyParser.json() )
 
 app.get('/api/assigned-readings', (req, res) => {
   res.json({
-    0: {id: 0, title: "Intro Chapter Heading", url: "https://textbooks.cs.ksu.edu/tlcs/1-what-is-cs/embed.html"},
+      0: { id: 0, title: "CIS 400 Textbook", url: "https://textbooks.cs.ksu.edu/cis400/" },
     1: {id: 1, title: "Introduction", url: "https://textbooks.cs.ksu.edu/tlcs/1-what-is-cs/01-introduction/embed.html"},
     2: {id: 2, title: "What is Computer Science?", url: "https://textbooks.cs.ksu.edu/tlcs/1-what-is-cs/04-computer-programming/embed.html"}
   })

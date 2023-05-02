@@ -31,4 +31,6 @@ You should then be able to access the service at http://localhost:3000.
 
 Both the client and server do hot code reloading, so you the server and/or client reboot and redeploy as you save changes in the code.  The only exception is changes to the dependencies and package file, which require a rebuild using `npm install` and through docker-compose.
 
+## User Documentation
 
+When the platform is loaded, assigned readings will show up in the left navigation pane. As of right now only a couple textbook pages are accessible and has to be hard coded into the API of the platform. Users can navigate through the pages by clicking the title of the assigned reading. This will then change the reading view to show that page of the textbook. Users can then highlight words in the textbook/reading view and then have the option to highlight or annotate. The highlight option highlights the text in yellow. The annotate option opens the hypthesis note taking on the right for users to add notes to the given text highlighted. Users may need to create an hypothesis account, which can be done from the hypothesis side bar, in order to save their notes. Notes should be saved when you leave the page and come back to it, even if you restart the platform.

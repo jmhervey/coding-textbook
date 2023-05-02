@@ -4,7 +4,9 @@ const ReadingPane = React.memo( props => {
 
   const [loading, setLoading] = useState(true)
   const [html, setHtml] = useState("")
-
+  /*
+   * Makes API call that embeds hypothes into source of the page, allowing notes on the page
+   */
   useEffect( () => {
     fetch('/api/reading', {
       method: 'POST',

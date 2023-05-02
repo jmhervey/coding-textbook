@@ -13,7 +13,9 @@ const StyledList = styled.ul`
   margin-left: 0;
   padding-left: 1rem;
 `
-
+/*
+ * Component for sidebar showing reading list / navigation 
+ */
 const ReadingList = React.memo( props => {
 
   const handleClick = (item) => {

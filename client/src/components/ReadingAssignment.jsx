@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import ReadingList from './ReadingList';
 import ReadingPane from './ReadingPane';
 
+/*
+* Component to display assigned reading retrived from API 
+*/
 const ReadingAssignment = React.memo( props => {
 
   const [selectedItem, setSelectedItem] = useState(props.items[0])

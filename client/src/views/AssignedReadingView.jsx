@@ -7,6 +7,7 @@ const AssignedReadingView = () => {
   const [loading, setLoading] = React.useState(true)
   const [assignedReading, setAssignedReading] = useState([])
 
+  //Calls the assigned reading API call to show textbook pages in the Assigned Reading 
   useEffect( () => {
     fetch("/api/assigned-readings")
     .then(response => {
@@ -22,6 +23,7 @@ const AssignedReadingView = () => {
 
   const items = Object.values(assignedReading)
 
+  //Show "loading" if textbook is still loading
   if(loading) return <>Loading...</>
 
   return (

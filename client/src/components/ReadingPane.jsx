@@ -24,42 +24,6 @@ const ReadingPane = React.memo( props => {
     })
   })
 
-    const RuleResults = React.createClass({
-        showMessage: function (rule) {
-            if (rule.ShowMessageToUser == true) {
-                alert(rule.MessageToUser);
-            }
-        },
-        render: function () {
-
-            var rules = this.props.businessRules.map((rule) => {
-                return (
-                    <tr>
-                        <td>
-                            <a href={rule.HREF} onClick={this.showMessage(rule)} target='_blank'>{rule.Name}</a>
-                        </td>
-                    </tr>
-                );
-            });
-            return (
-                <div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {rules}
-                        </tbody>
-                    </table>
-                </div>
-            );
-        }
-    });
-
-
-
   if(loading) return <>Loading...</>
 
   return (

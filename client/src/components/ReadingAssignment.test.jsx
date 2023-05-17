@@ -7,7 +7,7 @@ import fetchMock from "jest-fetch-mock";
 fetchMock.enableMocks();
 
 describe('ReadingAssignment', () => {
-  test('renders the ReadingAssignment component', () => {
+  test('Unit Test for the ReadingAssignment component', () => {
 
     const items = [
       { id: 1, title: 'Article 1', content: 'Content 1' },
@@ -17,7 +17,7 @@ describe('ReadingAssignment', () => {
     // Render the ReadingAssignment component
     const { container } = render(<ReadingAssignment items={items} />);
 
-    // Assert that the rendered component matches the saved snapshot
+    // Test if the rendered component matches the saved snapshot
     expect(container.firstChild).toMatchSnapshot();
   });
 });

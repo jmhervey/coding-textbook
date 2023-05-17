@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReadingAssignment renders the ReadingAssignment component 1`] = `
+<div
+  style="width: 100vw; height: 100vh; display: flex; flex-direction: row;"
+>
+  <nav>
+    <ul
+      class="sc-bcXHqe ivZAkS"
+    >
+      Textbooks
+    </ul>
+    <ul
+      class="sc-gswNZR heYmLR"
+    >
+      <li>
+        ☐
+        Article 1
+      </li>
+      <li>
+        ☐
+        Article 2
+      </li>
+    </ul>
+  </nav>
+  Loading...
+</div>
+`;

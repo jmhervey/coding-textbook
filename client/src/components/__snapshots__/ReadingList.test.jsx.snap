@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReadingList renders the ReadingList component 1`] = `
+<nav>
+  <ul
+    class="sc-bcXHqe ivZAkS"
+  >
+    Textbooks
+  </ul>
+  <ul
+    class="sc-gswNZR heYmLR"
+  >
+    <li>
+      ☐
+      Article 1
+    </li>
+    <li>
+      ☐
+      Article 2
+    </li>
+  </ul>
+</nav>
+`;

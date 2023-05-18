@@ -29,12 +29,18 @@ const ReadingList = React.memo( props => {
     </li>
   ))
     
+  function openPopup() {
+    window.open('https://www.google.com', 'Popup', 'width=400,height=300');
+  }
+
   return (
     <nav>
-      <StyledListHeader>Textbooks</StyledListHeader>
+      <StyledListHeader>Assigned Reading</StyledListHeader>
+      <p>Click the below textbook section to open its context:</p>
       <StyledList>
         {items}
       </StyledList>
+      <a href="#" class="hover-link">Help</a>
     </nav>
   )
 
